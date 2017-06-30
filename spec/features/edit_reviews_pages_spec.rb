@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "the edit a review process" do
   it "edits a review" do
-    product = Product.create(name: 'pizza',  description: "triangular food of awesomeness", image: "pizza.jpg", origin: 'USA')
+    product = Product.create(name: 'pizza',  description: "triangular food of awesomeness", image: "pizza.jpg", origin: 'USA', cost: 10)
     review = Review.create(user: 'Jim', product_id: product.id, comment: "I love Marios pizza", rating: 5)
     visit product_path(product)
     click_on 'Edit'

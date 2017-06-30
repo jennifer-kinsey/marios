@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  root to: 'products#index'
+  root to: 'about#index'
 
   resources :products do
-    resources :reviews
+    resources :reviews, :except => [:show, :index]
   end
 
 end

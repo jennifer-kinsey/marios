@@ -1,9 +1,12 @@
 <h1>Mario's Products</h1>
-
-<ul>
-  <% @products.each do |product| %>
-    <li><%= link_to product.name, product_path(product) %></li>
-  <% end %>
-</ul>
-
 <%= link_to "New Product", new_product_path %>
+<%= link_to "Most Reviewed Products",
+    products_path(sort_by: "sort_by_most_reviews") %>
+<%= link_to "Most Reviewed Products",
+    products_path(sort_by: "sort_by_most_reviews") %>
+
+<ol>
+  <% @products.each do |product| %>
+    <li><%= link_to "#{product.name}  | #{product.reviews.length} reviews", product_path(product) %></li>
+  <% end %>
+</ol>

@@ -1,7 +1,16 @@
 class ProductsController < ApplicationController
 
+  # def index
+  #   if params[:sort_by] == nil
+  #     @products = Product.sort_by_newest
+  #   else
+  #     @products = Product.send(params[:sort_by])
+  #   else
+  # end
+
   def index
-    @products = Product.all
+      @products = Product.all
+    else
   end
 
   def show
@@ -45,7 +54,7 @@ class ProductsController < ApplicationController
 
   private
   def product_params
-    params.require(:product).permit(:name, :description, :image, :origin)
+    params.require(:product).permit(:name, :description, :image, :origin, :cost)
   end
 
 end

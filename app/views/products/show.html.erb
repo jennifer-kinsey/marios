@@ -1,6 +1,7 @@
 <h1><%= @product.name %></h1>
 <h2><%= "Description: #{@product.description}" %></h2>
 <h2><%= "Country of Origin: #{@product.origin}"  %></h2>
+<h2><%= "Cost: $#{@product.cost}"%></h2>
 <img src="<%= @product.image %>" alt="image of <%= @product.name%>">
 
 <% if @product.reviews.any? %>

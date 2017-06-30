@@ -8,6 +8,7 @@ describe "the add a product process" do
     fill_in 'Description', :with => 'Saucy noodleage made to be twirled about on a fork'
     fill_in 'Image', :with => 'spaghet'
     fill_in 'Origin', :with => 'Italy'
+    fill_in 'Cost', :with => 5
     click_on 'Create Product'
     expect(page).to have_content 'Spaghetti'
   end
