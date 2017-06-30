@@ -14,6 +14,29 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def edit
+    @product = Product.find(params[:product_id])
+    @review = Review.find(params[:id])
+  end
+
+  def update
+    @product= Product.find(params[:product_id])
+    @review = Review.find(params[:id])
+    if @review.update(review_params)
+      flash[:notice] = "Review successfully updated!"
+      redirect_to product_path(@review.product)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @product = Product.find(params[:product_id])
+    @review = Review.find(params[:id])
+    @review.destroy
+    redirect_to product_path(@review.product)
+  end
+
 private
   def review_params
     params.require(:review).permit(:user, :comment, :rating)
