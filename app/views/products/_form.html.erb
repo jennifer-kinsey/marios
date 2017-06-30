@@ -2,14 +2,14 @@
 
 <%= form_for @product do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, class: "form-control" %>
   <%= f.label :description %>
-  <%= f.text_field :description %>
+  <%= f.text_field :description, class: "form-control" %>
   <%= f.label :image %>
-  <%= f.text_field :image %>
+  <%= f.text_field :image, class: "form-control" %>
   <%= f.label :origin %>
-  <%= f.text_field :origin %>
+  <%= f.text_field :origin, class: "form-control" %>
   <%= f.label :cost %>
-  <%= f.number_field :cost %>
-  <%= f.submit  %>
+  <%= f.number_field :cost, class: "form-control" %> <br>
+  <%= f.submit class: "btn btn-secondary" %>
 <% end %>

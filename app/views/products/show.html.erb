@@ -4,6 +4,8 @@
 <h2><%= "Cost: $#{@product.cost}"%></h2>
 <img src="<%= @product.image %>" alt="image of <%= @product.name%>">
 
+<p><%= link_to "Add new review", new_product_review_path(@product) %></p>
+
 <% if @product.reviews.any? %>
   <h4>Here are the reviews for this product:</h4>
 
@@ -20,7 +22,6 @@
 <% else %>
   <p>There are no reviews yet!</p>
 <% end %>
-
 
 
 
