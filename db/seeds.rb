@@ -9,7 +9,7 @@ Product.destroy_all
     image: Faker::Avatar.image,
     origin: Faker::Address.country,
   )
-  Faker::Number.between(3, 30).times do |index|
+  Faker::Number.between(1, 8).times do |index|
     product.reviews.create!(
       user: Faker::RickAndMorty.character,
       comment: Faker::RickAndMorty.quote,
