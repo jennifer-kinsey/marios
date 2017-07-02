@@ -13,7 +13,7 @@ Product.destroy_all
   Faker::Number.between(1, 8).times do |index|
     product.reviews.create!(
       user: Faker::Name.name,
-      comment: Faker::Lorem.paragraph,
+      comment: Faker::Lorem.characters(Faker::Number.between(50, 250)),
       rating: Faker::Number.between(1, 5),
     )
   end

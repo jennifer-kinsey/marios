@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
   validates :name, :description, :image, :origin, :cost, :presence => true
 
 
@@ -22,7 +22,8 @@ class Product < ActiveRecord::Base
   }
 
 # 3) All products made in the USA for buyers that want to buy local products.
-  scope :sort_by_us_origin, ->{
+  scope :us_origin, ->{
      where(origin: 'United States') }
+
 
 end

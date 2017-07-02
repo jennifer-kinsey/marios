@@ -1,13 +1,5 @@
 class ProductsController < ApplicationController
 
-  # def index
-  #   if params[:sort_by] == nil
-  #     @products = Product.sort_by_newest
-  #   else
-  #     @products = Product.send(params[:sort_by])
-  #   else
-  # end
-
   def index
     @products = Product.all
   end
@@ -45,7 +37,9 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    Product.find(params[:id]).destroy
+    # binding.pry
+    @product = Product.find(params[:id])
+    @product.destroy
     flash[:notice] = "Your product has been deleted"
     redirect_to products_path
   end

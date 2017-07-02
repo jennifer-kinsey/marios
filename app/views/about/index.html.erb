@@ -13,6 +13,17 @@
       <li><%= link_to product.name, product_path(product) %> - $<%=product.cost%> </li>
     <% end %>
     </ol>
+
+    <h2>Made In America</h2>
+    <% if @us_origin !=  nil %>
+      <ol>
+      <% @us_origin.each do |product| %>
+        <li><%= link_to product.name, product_path(product) %> - $<%=product.cost%> </li>
+      <% end %>
+      </ol>
+    <% else %>
+      <p>Sadly, there are no products made in America any more.</p>
+    <% end %>
   </div>
 
   <div class="col-md-8">

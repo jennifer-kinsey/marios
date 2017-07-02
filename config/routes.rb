@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :about, only: [:index]
 
   resources :products do
-    resources :reviews, :except => [:show, :index]
+    resources :reviews
   end
 
 end

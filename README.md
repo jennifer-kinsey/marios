@@ -63,7 +63,6 @@ If you ran into any issues, Google is your friend.
 ## Authors
 
 * Jennifer Kinsey
-* Spencer Alan
 
 ### Technologies Used
 

@@ -53,12 +53,13 @@ describe Product do
     end
   end
 
-  describe ".sort_by_us_origin" do
+  describe ".us_origin" do
     it "returns the products of US origin" do
       prod1
       prod2
-      expect(Product.sort_by_us_origin).to eq([prod2])
+      expect(Product.us_origin).to eq([prod2])
     end
   end
+
 
 end
