@@ -37,6 +37,11 @@ If it is up and running, you can move on to creating, initializing, and seeding 
 bundle exec rake db:setup
 ```
 
+And seed the database with fake products:
+```
+rails db:seed
+```
+
 * How to run the test suite
 
 ```
