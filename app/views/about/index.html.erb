@@ -1,4 +1,20 @@
 <div class="row">
+
+  <div class="col-md-4">
+    <h2>Highest Reviewed Productum</h2>
+    <% @most_reviewed.each do |product| %>
+      <p> Product: <%= link_to product.name, product_path(product) %> </p>
+      <p> <%= product.reviews.length %> Reviews</p>
+    <% end %>
+
+    <h2>Newest Productum</h2>
+    <ol>
+    <% @newest_product.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %> - $<%=product.cost%> </li>
+    <% end %>
+    </ol>
+  </div>
+
   <div class="col-md-8">
     <h2>About Mario's Supellectile</h2>
 
@@ -11,18 +27,7 @@
     <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet risus a tortor. </p>
 
     <p>Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet. Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut orci risus, accumsan porttitor, cursus quis, aliquet eget, justo. Sed pretium blandit orci. Ut eu diam at pede suscipit sodales. Aenean lectus elit, fermentum non, convallis id, sagittis at, neque. </p>
-
   </div>
-  <div class="col-md-4">
-    <h2>Highest Reviewed Productum</h2>
-    <% @most_reviewed.each do |product| %>
-      <%= link_to @most_reviewed.name, product_path(@most_reviewed) %>
-    <% end %>
 
-    <h2>Newest Productum</h2>
-    <% @newest_product.each do |product| %>
-      <%= link_to product.name, product_path(product) %>
-    <% end %>
-  </div>
 
 </div>
