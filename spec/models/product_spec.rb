@@ -28,7 +28,6 @@ describe Product do
     origin: "United States",
     cost: 2,
     )
-
   }
 
   describe ".newest_product" do

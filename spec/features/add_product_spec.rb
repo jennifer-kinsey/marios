@@ -1,6 +1,14 @@
 require 'rails_helper'
 
 describe "the add a product process" do
+
+  let(:link) {
+    Link.create(
+      description: "test description",
+      link_url: "www.testurl.com",
+      user: "Testy McTesterson",
+    )
+  }
   it "adds a new product" do
     visit products_path
     click_link 'Add a new Product'

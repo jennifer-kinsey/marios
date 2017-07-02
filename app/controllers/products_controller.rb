@@ -9,8 +9,7 @@ class ProductsController < ApplicationController
   # end
 
   def index
-      @products = Product.all
-    else
+    @products = Product.all
   end
 
   def show
@@ -46,9 +45,8 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    @product = Product.find(params[:id])
-    @product.destroy
-    flash[:notice] = "Product successfully deleted."
+    Product.find(params[:id]).destroy
+    flash[:notice] = "Your product has been deleted"
     redirect_to products_path
   end
 

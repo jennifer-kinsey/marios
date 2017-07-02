@@ -3,6 +3,6 @@
 
 <ol>
   <% @products.each do |product| %>
-    <li><%= link_to "#{product.name}  | #{product.reviews.length} reviews", product_path(product) %></li>
+    <li><%= link_to "#{product.name}", product_path(product) %> | <%= product.reviews.length %> reviews</li>
   <% end %>
 </ol>
