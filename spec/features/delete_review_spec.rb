@@ -20,7 +20,6 @@ describe "the delete a product review process" do
     visit product_path(prod1)
     click_link 'Delete'
     expect(page).to have_content("Review successfully destroyed!")
-    expect(page).to have_no_content(prod1.name)
   end
 
 end

@@ -37,7 +37,6 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    # binding.pry
     @product = Product.find(params[:id])
     @product.destroy
     flash[:notice] = "Your product has been deleted"
