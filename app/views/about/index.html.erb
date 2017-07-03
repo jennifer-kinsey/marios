@@ -15,7 +15,7 @@
     </ol>
 
     <h2>Made In America</h2>
-    <% if @us_origin !=  nil %>
+    <% if @us_origin.length != 0 %>
       <ol>
       <% @us_origin.each do |product| %>
         <li><%= link_to product.name, product_path(product) %> - $<%=product.cost%> </li>
@@ -27,7 +27,7 @@
   </div>
 
   <div class="col-md-8">
-    <h2>About Mario's Supellectile</h2>
+    <h2>About Mario's Supellectilem</h2>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. </p>
 
