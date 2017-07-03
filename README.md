@@ -5,9 +5,15 @@ This is a Ruby on Rails web app. Fictious store Mario's Supellectilem sells vari
 This demonstrates use of seeding data from faker gem, use of scopes, unit and integration testing, proper route convention, and use of success and error messages.
 
 
-##Screenshots of Homepage, Products Page, and Individual Product Page
+## Screenshots 
+
+### Homepage
 ![screen shot 2017-07-02 at 6 33 57 pm](https://user-images.githubusercontent.com/26371824/27775383-37ff2c58-5f56-11e7-9774-29e88e985166.png)
+
+## Products Page 
 ![screen shot 2017-07-02 at 6 34 20 pm](https://user-images.githubusercontent.com/26371824/27775384-3801d6e2-5f56-11e7-9ded-ef071a1de679.png)
+
+## Individual Product Page
 ![screen shot 2017-07-02 at 6 35 45 pm](https://user-images.githubusercontent.com/26371824/27775385-3805dd1e-5f56-11e7-84ec-01627217851e.png)
 
 
