@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 describe Product do
-  it { should validate_presence_of :name }
-  it { should validate_presence_of :description }
-  it { should validate_presence_of :image }
-  it { should validate_presence_of :origin }
-  it { should validate_presence_of :cost }
+  it { expect validate_presence_of :name }
+  it { expect validate_presence_of :description }
+  it { expect validate_presence_of :image }
+  it { expect validate_presence_of :origin }
+  it { expect validate_presence_of :cost }
 
   it { should have_many :reviews }
 
@@ -29,6 +29,11 @@ describe Product do
     cost: 2,
     )
   }
+  # 
+  # it 'is has a comment' do
+  #   product = FactoryGirl.create(:product)
+  #   product.name.should eq "zwieback"
+  # end
 
   describe ".newest_product" do
     it "returns the most recently reviewed products" do
